@@ -18,19 +18,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="manage_articles.feature" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="manage_articles.feature" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/features/manage_articles.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="14" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="integration.rake" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/tasks/integration.rake">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
+            <state line="46" column="14" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.8592965">
               <folding />
             </state>
           </provider>
@@ -618,13 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/manage_articles.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="14" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="15" selection-end="15" vertical-scroll-proportion="0.0">
@@ -632,9 +616,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/integration.rake">
+    <entry file="file://$PROJECT_DIR$/features/manage_articles.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
+        <state line="46" column="14" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.8592965">
           <folding />
         </state>
       </provider>
