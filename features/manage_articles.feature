@@ -38,11 +38,18 @@ Feature: Manage Articles
         And I should see "Your blog post is good."
 
     Scenario: Delete a Blog Entry
-        Given I have articles with title "Soupa"
+        Given I have articles with title "Soup"
         When I go to the list of articles
         And I follow "Delete"
         Then I should see "Article deleted."
         And I should have 0 article
 
-    Scenario: 
+    Scenario: Send feedback to author about article
+        Given I have articles with title "Soup"
+        When When I go to the list of articles
+        And I follow "Send Feedback"
+        And I fill in "Name" with "Steve"
+        And I fill in "Email" with "steve@apple.com"
+        And I fill in "Message" with "Good articles published!"
+        And I should see "Feedback sent!"
 

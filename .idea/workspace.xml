@@ -21,16 +21,7 @@
       <file leaf-file-name="manage_articles.feature" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/features/manage_articles.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="14" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.8592965">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="15" selection-end="15" vertical-scroll-proportion="0.0">
+            <state line="53" column="41" selection-start="1942" selection-end="1942" vertical-scroll-proportion="0.75376886">
               <folding />
             </state>
           </provider>
@@ -39,7 +30,7 @@
       <file leaf-file-name="comment.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="1" column="21" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -604,7 +595,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="1" column="21" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -618,7 +609,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/features/manage_articles.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="14" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.8592965">
+        <state line="53" column="41" selection-start="1942" selection-end="1942" vertical-scroll-proportion="0.75376886">
           <folding />
         </state>
       </provider>
