@@ -1,0 +1,14 @@
+<% form_for @article do |f| %>
+    <p>
+      <%= f.error_messages %>
+    </p>
+    <p>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </p>
+    <p>
+        <%= f.label :content %>
+        <%= f.text_field :content %>
+    </p>
+    <p><%= f.submit "Create" %></p>
+<% end %>

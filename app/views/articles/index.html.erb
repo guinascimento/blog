@@ -1,0 +1,17 @@
+<%= flash[:notice] %>
+
+<% for article in @articles %>
+    <h1><p>Title: <%=h article.title %></p></h1>
+    <h1><p>Content: <%=h article.content %></p></h1>
+    <p>
+      <% for c in article.comments %>
+        <%= c.title %>
+        <%= c.message %>
+      <% end %>
+    </p>
+    <p><%= link_to "Post Your Comment", :controller => "articles", :action => "comment", :id => article.id %></p>
+    <p><%= link_to "Delete", article_url(article), :method => :delete, :id => article.id %></p>
+    <hr>
+<% end %>
+
+<p><%= link_to "New Article", new_article_path %></p>

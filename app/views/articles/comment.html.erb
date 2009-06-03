@@ -1,0 +1,15 @@
+<% form_for :comment, @comment, :url => { :action => "post_comment" } do |f| %>
+    <%= f.hidden_field :article_id, :value => params[:id] %> 
+    <p>
+      <%= f.error_messages %>
+    </p>
+    <p>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </p>
+    <p>
+        <%= f.label :message %>
+        <%= f.text_field :message %>
+    </p>
+    <p><%= f.submit "Post Comment" %></p>
+<% end %>
