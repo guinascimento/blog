@@ -46,10 +46,10 @@ Feature: Manage Articles
 
     Scenario: Send feedback to author about article
         Given I have articles with title "Soup"
-        When When I go to the list of articles
+        When I go to the list of articles
         And I follow "Send Feedback"
         And I fill in "Name" with "Steve"
         And I fill in "Email" with "steve@apple.com"
         And I fill in "Message" with "Good articles published!"
-        And I should see "Feedback sent!"
-
+        Then I press "Send"
+        And I should see "Feedback sent."

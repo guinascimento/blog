@@ -1,0 +1,2818 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:04:36', '\"Soup\"', NULL, '2009-06-03 18:04:36')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:04:36) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 25) [0m
+Completed in 250ms (View: 250, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:04:36) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:04:36) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:04:36) [POST]
+  Parameters: {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:04:36', 'Soup', 'Delicious', '2009-06-03 18:04:36')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 16ms (DB: 0) | 302 Found [http://www.example.com/articles]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:04:36) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 26) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:04:36) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:04:36) [GET]
+Rendering articles/new
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:04:36) [POST]
+  Parameters: {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:04:36', '\"Soup\"', NULL, '2009-06-03 18:04:36')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:04:36) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 27) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/comment/27 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2009-06-03 15:04:36) [GET]
+  Parameters: {"id"=>"27"}
+  [4;35;1mComment Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering articles/comment
+Completed in 15ms (View: 0, DB: 15) | 200 OK [http://www.example.com/articles/comment/27]
+REQUESTING PAGE: POST /articles/post_comment with {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"27"}} and HTTP headers {"HTTP_REFERER"=>"/articles/comment/27"}
+
+
+Processing ArticlesController#post_comment (for 127.0.0.1 at 2009-06-03 15:04:36) [POST]
+  Parameters: {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"27"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`message`, `updated_at`, `title`, `article_id`, `created_at`) VALUES('Your blog post is good.', '2009-06-03 18:04:36', 'Good Post!', 27, '2009-06-03 18:04:36')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles/post_comment]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles/post_comment"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:04:36) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 27) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (47.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:04:37', '\"Soup\"', NULL, '2009-06-03 18:04:37')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:04:37) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 28) [0m
+Completed in 15ms (View: 15, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: DELETE http://www.example.com/articles/28 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-06-03 15:04:37) [DELETE]
+  Parameters: {"id"=>"28"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 28) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Destroy (0.0ms)[0m   [0;1mDELETE FROM `articles` WHERE `id` = 28[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles/28]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/articles/28"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:04:37) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:04:37', '\"Soup\"', NULL, '2009-06-03 18:04:37')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (110.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:05:27', '\"Soup\"', NULL, '2009-06-03 18:05:27')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:05:27) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 30) [0m
+Completed in 1079ms (View: 1079, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:05:28) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:05:28) [GET]
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:05:28) [POST]
+  Parameters: {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:05:28', 'Soup', 'Delicious', '2009-06-03 18:05:28')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:05:28) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 31) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:05:29) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 15ms (View: 15, DB: 31) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:05:29) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:05:29) [POST]
+  Parameters: {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:05:29', '\"Soup\"', NULL, '2009-06-03 18:05:29')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:05:29) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 32) [0m
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/comment/32 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2009-06-03 15:05:29) [GET]
+  Parameters: {"id"=>"32"}
+  [4;35;1mComment Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering articles/comment
+Completed in 47ms (View: 32, DB: 15) | 200 OK [http://www.example.com/articles/comment/32]
+REQUESTING PAGE: POST /articles/post_comment with {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"32"}} and HTTP headers {"HTTP_REFERER"=>"/articles/comment/32"}
+
+
+Processing ArticlesController#post_comment (for 127.0.0.1 at 2009-06-03 15:05:29) [POST]
+  Parameters: {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"32"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`message`, `updated_at`, `title`, `article_id`, `created_at`) VALUES('Your blog post is good.', '2009-06-03 18:05:29', 'Good Post!', 32, '2009-06-03 18:05:29')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 16ms (DB: 0) | 302 Found [http://www.example.com/articles/post_comment]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles/post_comment"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:05:29) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 32) [0m
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (140.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:05:29', '\"Soup\"', NULL, '2009-06-03 18:05:29')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:05:29) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 33) [0m
+Completed in 31ms (View: 15, DB: 140) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: DELETE http://www.example.com/articles/33 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-06-03 15:05:29) [DELETE]
+  Parameters: {"id"=>"33"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 33) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Destroy (0.0ms)[0m   [0;1mDELETE FROM `articles` WHERE `id` = 33[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 16ms (DB: 0) | 302 Found [http://www.example.com/articles/33]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/articles/33"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:05:29) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:05:29', '\"Soup\"', NULL, '2009-06-03 18:05:29')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:06:37', '\"Soup\"', NULL, '2009-06-03 18:06:37')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:06:37) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 35) [0m
+Completed in 234ms (View: 234, DB: 16) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:06:38) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:06:38) [GET]
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:06:38) [POST]
+  Parameters: {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:06:38', 'Soup', 'Delicious', '2009-06-03 18:06:38')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:06:38) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 36) [0m
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:06:38) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:06:38) [GET]
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:06:38) [POST]
+  Parameters: {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:06:38', '\"Soup\"', NULL, '2009-06-03 18:06:38')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:06:38) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 37) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/comment/37 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2009-06-03 15:06:38) [GET]
+  Parameters: {"id"=>"37"}
+  [4;35;1mComment Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering articles/comment
+Completed in 15ms (View: 0, DB: 15) | 200 OK [http://www.example.com/articles/comment/37]
+REQUESTING PAGE: POST /articles/post_comment with {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"37"}} and HTTP headers {"HTTP_REFERER"=>"/articles/comment/37"}
+
+
+Processing ArticlesController#post_comment (for 127.0.0.1 at 2009-06-03 15:06:38) [POST]
+  Parameters: {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"37"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`message`, `updated_at`, `title`, `article_id`, `created_at`) VALUES('Your blog post is good.', '2009-06-03 18:06:38', 'Good Post!', 37, '2009-06-03 18:06:38')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles/post_comment]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles/post_comment"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:06:38) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 37) [0m
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (47.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:06:38', '\"Soup\"', NULL, '2009-06-03 18:06:38')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:06:38) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 38) [0m
+Completed in 0ms (View: 0, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: DELETE http://www.example.com/articles/38 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-06-03 15:06:38) [DELETE]
+  Parameters: {"id"=>"38"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 38) [0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Destroy (0.0ms)[0m   [0;1mDELETE FROM `articles` WHERE `id` = 38[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 15ms (DB: 15) | 302 Found [http://www.example.com/articles/38]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/articles/38"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:06:38) [GET]
+  [4;36;1mArticle Load (16.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:06:39', '\"Soup\"', NULL, '2009-06-03 18:06:39')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:06:39) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 39) [0m
+Completed in 16ms (View: 16, DB: 47) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (47.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:08:58', '\"Soup\"', NULL, '2009-06-03 18:08:58')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:08:58) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 40) [0m
+Completed in 234ms (View: 234, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (62.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:08:58) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 62) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:08:58) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:08:58) [POST]
+  Parameters: {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:08:58', 'Soup', 'Delicious', '2009-06-03 18:08:58')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 16ms (DB: 0) | 302 Found [http://www.example.com/articles]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:08:58) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 41) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (15.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:08:58) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 62) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:08:58) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:08:58) [POST]
+  Parameters: {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:08:58', '\"Soup\"', NULL, '2009-06-03 18:08:58')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:08:58) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 42) [0m
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/comment/42 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2009-06-03 15:08:58) [GET]
+  Parameters: {"id"=>"42"}
+  [4;35;1mComment Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering articles/comment
+Completed in 172ms (View: 156, DB: 16) | 200 OK [http://www.example.com/articles/comment/42]
+REQUESTING PAGE: POST /articles/post_comment with {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"42"}} and HTTP headers {"HTTP_REFERER"=>"/articles/comment/42"}
+
+
+Processing ArticlesController#post_comment (for 127.0.0.1 at 2009-06-03 15:08:59) [POST]
+  Parameters: {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"42"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`message`, `updated_at`, `title`, `article_id`, `created_at`) VALUES('Your blog post is good.', '2009-06-03 18:08:59', 'Good Post!', 42, '2009-06-03 18:08:59')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 16ms (DB: 0) | 302 Found [http://www.example.com/articles/post_comment]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles/post_comment"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:08:59) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 42) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (47.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:08:59', '\"Soup\"', NULL, '2009-06-03 18:08:59')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:08:59) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 43) [0m
+Completed in 15ms (View: 15, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: DELETE http://www.example.com/articles/43 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-06-03 15:08:59) [DELETE]
+  Parameters: {"id"=>"43"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 43) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Destroy (0.0ms)[0m   [0;1mDELETE FROM `articles` WHERE `id` = 43[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles/43]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/articles/43"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:08:59) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (157.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:08:59', '\"Soup\"', NULL, '2009-06-03 18:08:59')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:08:59) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 44) [0m
+Completed in 16ms (View: 0, DB: 157) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:08:59) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+  [4;35;1mSQL (47.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:10:55', '\"Soup\"', NULL, '2009-06-03 18:10:55')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:10:55) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 45) [0m
+Completed in 235ms (View: 235, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (63.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:10:55) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 63) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:10:55) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:10:55) [POST]
+  Parameters: {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:10:55', 'Soup', 'Delicious', '2009-06-03 18:10:55')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:10:55) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 46) [0m
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:10:55) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:10:55) [GET]
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:10:55) [POST]
+  Parameters: {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:10:55', '\"Soup\"', NULL, '2009-06-03 18:10:55')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:10:55) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 47) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/comment/47 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2009-06-03 15:10:55) [GET]
+  Parameters: {"id"=>"47"}
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering articles/comment
+Completed in 157ms (View: 157, DB: 0) | 200 OK [http://www.example.com/articles/comment/47]
+REQUESTING PAGE: POST /articles/post_comment with {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"47"}} and HTTP headers {"HTTP_REFERER"=>"/articles/comment/47"}
+
+
+Processing ArticlesController#post_comment (for 127.0.0.1 at 2009-06-03 15:10:56) [POST]
+  Parameters: {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"47"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`message`, `updated_at`, `title`, `article_id`, `created_at`) VALUES('Your blog post is good.', '2009-06-03 18:10:56', 'Good Post!', 47, '2009-06-03 18:10:56')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles/post_comment]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles/post_comment"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:10:56) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 47) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (47.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:10:56', '\"Soup\"', NULL, '2009-06-03 18:10:56')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:10:56) [GET]
+  [4;36;1mArticle Load (16.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 48) [0m
+Completed in 16ms (View: 0, DB: 63) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: DELETE http://www.example.com/articles/48 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-06-03 15:10:56) [DELETE]
+  Parameters: {"id"=>"48"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 48) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Destroy (0.0ms)[0m   [0;1mDELETE FROM `articles` WHERE `id` = 48[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles/48]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/articles/48"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:10:56) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:10:56', '\"Soup\"', NULL, '2009-06-03 18:10:56')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:10:56) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 49) [0m
+Completed in 15ms (View: 15, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/feedback with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-06-03 15:10:56) [GET]
+  Parameters: {"id"=>"feedback"}
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-06-03 15:10:56) [GET]
+  Parameters: {"id"=>"feedback"}
+  [4;35;1mSQL (63.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:11:39', '\"Soup\"', NULL, '2009-06-03 18:11:39')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:11:39) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 50) [0m
+Completed in 281ms (View: 265, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (31.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:11:40) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 15ms (View: 15, DB: 31) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:11:40) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:11:40) [POST]
+  Parameters: {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:11:40', 'Soup', 'Delicious', '2009-06-03 18:11:40')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:11:40) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 51) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:11:40) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 16ms (View: 16, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:11:40) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:11:40) [POST]
+  Parameters: {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering articles/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:11:40', '\"Soup\"', NULL, '2009-06-03 18:11:40')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:11:40) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 52) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/comment/52 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2009-06-03 15:11:40) [GET]
+  Parameters: {"id"=>"52"}
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering articles/comment
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.example.com/articles/comment/52]
+REQUESTING PAGE: POST /articles/post_comment with {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"52"}} and HTTP headers {"HTTP_REFERER"=>"/articles/comment/52"}
+
+
+Processing ArticlesController#post_comment (for 127.0.0.1 at 2009-06-03 15:11:40) [POST]
+  Parameters: {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"52"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`message`, `updated_at`, `title`, `article_id`, `created_at`) VALUES('Your blog post is good.', '2009-06-03 18:11:40', 'Good Post!', 52, '2009-06-03 18:11:40')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 16ms (DB: 0) | 302 Found [http://www.example.com/articles/post_comment]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles/post_comment"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:11:40) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 52) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (47.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:11:40', '\"Soup\"', NULL, '2009-06-03 18:11:40')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:11:40) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 53) [0m
+Completed in 0ms (View: 0, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: DELETE http://www.example.com/articles/53 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-06-03 15:11:40) [DELETE]
+  Parameters: {"id"=>"53"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 53) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Destroy (0.0ms)[0m   [0;1mDELETE FROM `articles` WHERE `id` = 53[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 16ms (DB: 0) | 302 Found [http://www.example.com/articles/53]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/articles/53"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:11:40) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (109.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:11:40', '\"Soup\"', NULL, '2009-06-03 18:11:40')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:11:40) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 54) [0m
+Completed in 16ms (View: 0, DB: 109) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /feedback with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#feedback (for 127.0.0.1 at 2009-06-03 15:11:40) [GET]
+
+
+Processing ApplicationController#feedback (for 127.0.0.1 at 2009-06-03 15:11:40) [GET]
+  [4;35;1mSQL (62.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:21:32', '\"Soup\"', NULL, '2009-06-03 18:21:32')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:21:32) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+Completed in 250ms (View: 234, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:21:32) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:21:32) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:21:32) [POST]
+  Parameters: {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:21:32', 'Soup', 'Delicious', '2009-06-03 18:21:32')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:21:32) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 2) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (46.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:21:32) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 46) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:21:32) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:21:32) [POST]
+  Parameters: {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:21:32', '\"Soup\"', NULL, '2009-06-03 18:21:32')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:21:32) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 3) [0m
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/comment/3 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2009-06-03 15:21:33) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mComment Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering articles/comment
+Completed in 31ms (View: 16, DB: 15) | 200 OK [http://www.example.com/articles/comment/3]
+REQUESTING PAGE: POST /articles/post_comment with {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"3"}} and HTTP headers {"HTTP_REFERER"=>"/articles/comment/3"}
+
+
+Processing ArticlesController#post_comment (for 127.0.0.1 at 2009-06-03 15:21:33) [POST]
+  Parameters: {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"3"}}
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`message`, `updated_at`, `title`, `article_id`, `created_at`) VALUES('Your blog post is good.', '2009-06-03 18:21:33', 'Good Post!', 3, '2009-06-03 18:21:33')[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 31ms (DB: 31) | 302 Found [http://www.example.com/articles/post_comment]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles/post_comment"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:21:33) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 3) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (125.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:21:33', '\"Soup\"', NULL, '2009-06-03 18:21:33')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:21:33) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 4) [0m
+Completed in 0ms (View: 0, DB: 125) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: DELETE http://www.example.com/articles/4 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-06-03 15:21:33) [DELETE]
+  Parameters: {"id"=>"4"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Destroy (0.0ms)[0m   [0;1mDELETE FROM `articles` WHERE `id` = 4[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 15ms (DB: 15) | 302 Found [http://www.example.com/articles/4]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/articles/4"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:21:33) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:21:33', '\"Soup\"', NULL, '2009-06-03 18:21:33')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:21:33) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 5) [0m
+Completed in 15ms (View: 15, DB: 31) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /feedback with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#feedback (for 127.0.0.1 at 2009-06-03 15:21:33) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+
+Processing ApplicationController#feedback (for 127.0.0.1 at 2009-06-03 15:21:33) [GET]
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:29:36', '\"Soup\"', NULL, '2009-06-03 18:29:36')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:29:36) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 1) [0m
+Completed in 344ms (View: 344, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (78.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:29:37) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 78) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:29:37) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:29:37) [POST]
+  Parameters: {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:29:37', 'Soup', 'Delicious', '2009-06-03 18:29:37')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:29:37) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 2) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:29:37) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 16ms (View: 16, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:29:37) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:29:37) [POST]
+  Parameters: {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering articles/new
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:29:37', '\"Soup\"', NULL, '2009-06-03 18:29:37')[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:29:37) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 3) [0m
+Completed in 15ms (View: 15, DB: 16) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/comment/3 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2009-06-03 15:29:37) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering articles/comment
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles/comment/3]
+REQUESTING PAGE: POST /articles/post_comment with {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"3"}} and HTTP headers {"HTTP_REFERER"=>"/articles/comment/3"}
+
+
+Processing ArticlesController#post_comment (for 127.0.0.1 at 2009-06-03 15:29:38) [POST]
+  Parameters: {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"3"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`message`, `updated_at`, `title`, `article_id`, `created_at`) VALUES('Your blog post is good.', '2009-06-03 18:29:38', 'Good Post!', 3, '2009-06-03 18:29:38')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 15ms (DB: 0) | 302 Found [http://www.example.com/articles/post_comment]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles/post_comment"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:29:38) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 3) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (203.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:29:38', '\"Soup\"', NULL, '2009-06-03 18:29:38')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:29:38) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 4) [0m
+Completed in 0ms (View: 0, DB: 203) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: DELETE http://www.example.com/articles/4 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-06-03 15:29:38) [DELETE]
+  Parameters: {"id"=>"4"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Destroy (0.0ms)[0m   [0;1mDELETE FROM `articles` WHERE `id` = 4[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 15ms (DB: 0) | 302 Found [http://www.example.com/articles/4]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/articles/4"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:29:38) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (46.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:29:38', '\"Soup\"', NULL, '2009-06-03 18:29:38')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:29:38) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 5) [0m
+Completed in 15ms (View: 15, DB: 62) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /feedback with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#feedback (for 127.0.0.1 at 2009-06-03 15:29:38) [GET]
+
+
+Processing ApplicationController#feedback (for 127.0.0.1 at 2009-06-03 15:29:38) [GET]
+  [4;35;1mSQL (47.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:33:52', '\"Soup\"', NULL, '2009-06-03 18:33:52')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:33:52) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 6) [0m
+Completed in 266ms (View: 266, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (63.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:33:53) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 63) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:33:53) [GET]
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:33:53) [POST]
+  Parameters: {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"}
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:33:53', 'Soup', 'Delicious', '2009-06-03 18:33:53')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 16ms (DB: 16) | 302 Found [http://www.example.com/articles]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:33:53) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 7) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:33:53) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:33:53) [GET]
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:33:53) [POST]
+  Parameters: {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering articles/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:33:53', '\"Soup\"', NULL, '2009-06-03 18:33:53')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:33:53) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 8) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/comment/8 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2009-06-03 15:33:53) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mComment Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering articles/comment
+Completed in 32ms (View: 16, DB: 16) | 200 OK [http://www.example.com/articles/comment/8]
+REQUESTING PAGE: POST /articles/post_comment with {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"8"}} and HTTP headers {"HTTP_REFERER"=>"/articles/comment/8"}
+
+
+Processing ArticlesController#post_comment (for 127.0.0.1 at 2009-06-03 15:33:53) [POST]
+  Parameters: {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"8"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`message`, `updated_at`, `title`, `article_id`, `created_at`) VALUES('Your blog post is good.', '2009-06-03 18:33:53', 'Good Post!', 8, '2009-06-03 18:33:53')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles/post_comment]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles/post_comment"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:33:53) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (16.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 8) [0m
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (79.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:33:53', '\"Soup\"', NULL, '2009-06-03 18:33:53')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:33:53) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 9) [0m
+Completed in 0ms (View: 0, DB: 79) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: DELETE http://www.example.com/articles/9 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-06-03 15:33:53) [DELETE]
+  Parameters: {"id"=>"9"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 9) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Destroy (0.0ms)[0m   [0;1mDELETE FROM `articles` WHERE `id` = 9[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles/9]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/articles/9"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:33:53) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:33:53', '\"Soup\"', NULL, '2009-06-03 18:33:53')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:33:53) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 10) [0m
+Completed in 0ms (View: 0, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /feedback with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#feedback (for 127.0.0.1 at 2009-06-03 15:33:54) [GET]
+  [4;35;1mFeedback Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `feedbacks`[0m
+Rendering articles/feedback
+
+
+Processing ApplicationController#feedback (for 127.0.0.1 at 2009-06-03 15:33:55) [GET]
+  [4;36;1mSQL (63.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:35:10', '\"Soup\"', NULL, '2009-06-03 18:35:10')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:35:11) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 11) [0m
+Completed in 234ms (View: 234, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (62.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:35:11) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 62) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:35:11) [GET]
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:35:11) [POST]
+  Parameters: {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:35:11', 'Soup', 'Delicious', '2009-06-03 18:35:11')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 16ms (DB: 0) | 302 Found [http://www.example.com/articles]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:35:11) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 12) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:35:11) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 62) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:35:11) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:35:11) [POST]
+  Parameters: {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering articles/new
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:35:11', '\"Soup\"', NULL, '2009-06-03 18:35:11')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:35:11) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 13) [0m
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/comment/13 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2009-06-03 15:35:11) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering articles/comment
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles/comment/13]
+REQUESTING PAGE: POST /articles/post_comment with {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"13"}} and HTTP headers {"HTTP_REFERER"=>"/articles/comment/13"}
+
+
+Processing ArticlesController#post_comment (for 127.0.0.1 at 2009-06-03 15:35:11) [POST]
+  Parameters: {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"13"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`message`, `updated_at`, `title`, `article_id`, `created_at`) VALUES('Your blog post is good.', '2009-06-03 18:35:11', 'Good Post!', 13, '2009-06-03 18:35:11')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 15ms (DB: 0) | 302 Found [http://www.example.com/articles/post_comment]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles/post_comment"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:35:11) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 13) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (47.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:35:12', '\"Soup\"', NULL, '2009-06-03 18:35:12')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:35:12) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 14) [0m
+Completed in 0ms (View: 0, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: DELETE http://www.example.com/articles/14 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-06-03 15:35:12) [DELETE]
+  Parameters: {"id"=>"14"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 14) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Destroy (0.0ms)[0m   [0;1mDELETE FROM `articles` WHERE `id` = 14[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 15ms (DB: 0) | 302 Found [http://www.example.com/articles/14]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/articles/14"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:35:12) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (93.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:35:12', '\"Soup\"', NULL, '2009-06-03 18:35:12')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:35:12) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 15) [0m
+Completed in 78ms (View: 78, DB: 93) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /feedback with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#feedback (for 127.0.0.1 at 2009-06-03 15:35:12) [GET]
+  [4;35;1mFeedback Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `feedbacks`[0m
+Rendering articles/feedback
+
+
+Processing ApplicationController#feedback (for 127.0.0.1 at 2009-06-03 15:35:13) [GET]
+  [4;36;1mSQL (62.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:37:01', '\"Soup\"', NULL, '2009-06-03 18:37:01')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:37:01) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 16) [0m
+Completed in 250ms (View: 234, DB: 16) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (62.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:37:01) [GET]
+  [4;35;1mArticle Load (16.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 16ms (View: 0, DB: 78) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:37:01) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:37:01) [POST]
+  Parameters: {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:37:01', 'Soup', 'Delicious', '2009-06-03 18:37:01')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:37:01) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 17) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:37:01) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 63) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:37:01) [GET]
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:37:02) [POST]
+  Parameters: {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering articles/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:37:02', '\"Soup\"', NULL, '2009-06-03 18:37:02')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:37:02) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 18) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/comment/18 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2009-06-03 15:37:02) [GET]
+  Parameters: {"id"=>"18"}
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering articles/comment
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles/comment/18]
+REQUESTING PAGE: POST /articles/post_comment with {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"18"}} and HTTP headers {"HTTP_REFERER"=>"/articles/comment/18"}
+
+
+Processing ArticlesController#post_comment (for 127.0.0.1 at 2009-06-03 15:37:02) [POST]
+  Parameters: {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"18"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`message`, `updated_at`, `title`, `article_id`, `created_at`) VALUES('Your blog post is good.', '2009-06-03 18:37:02', 'Good Post!', 18, '2009-06-03 18:37:02')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles/post_comment]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles/post_comment"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:37:02) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 18) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (62.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:37:02', '\"Soup\"', NULL, '2009-06-03 18:37:02')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:37:02) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 19) [0m
+Completed in 15ms (View: 0, DB: 62) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: DELETE http://www.example.com/articles/19 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-06-03 15:37:02) [DELETE]
+  Parameters: {"id"=>"19"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 19) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Destroy (0.0ms)[0m   [0;1mDELETE FROM `articles` WHERE `id` = 19[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 16ms (DB: 0) | 302 Found [http://www.example.com/articles/19]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/articles/19"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:37:02) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:37:02', '\"Soup\"', NULL, '2009-06-03 18:37:02')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:37:02) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 20) [0m
+Completed in 16ms (View: 16, DB: 94) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (47.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:37:48', '\"Soup\"', NULL, '2009-06-03 18:37:48')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:37:48) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 21) [0m
+Completed in 250ms (View: 250, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (46.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:37:48) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 46) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:37:48) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:37:48) [POST]
+  Parameters: {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:37:48', 'Soup', 'Delicious', '2009-06-03 18:37:48')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:37:48) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 22) [0m
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (16.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:37:48) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 63) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:37:48) [GET]
+Rendering articles/new
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:37:48) [POST]
+  Parameters: {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering articles/new
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:37:48', '\"Soup\"', NULL, '2009-06-03 18:37:48')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:37:48) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 23) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/comment/23 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2009-06-03 15:37:48) [GET]
+  Parameters: {"id"=>"23"}
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering articles/comment
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles/comment/23]
+REQUESTING PAGE: POST /articles/post_comment with {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"23"}} and HTTP headers {"HTTP_REFERER"=>"/articles/comment/23"}
+
+
+Processing ArticlesController#post_comment (for 127.0.0.1 at 2009-06-03 15:37:49) [POST]
+  Parameters: {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"23"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`message`, `updated_at`, `title`, `article_id`, `created_at`) VALUES('Your blog post is good.', '2009-06-03 18:37:49', 'Good Post!', 23, '2009-06-03 18:37:49')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 15ms (DB: 0) | 302 Found [http://www.example.com/articles/post_comment]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles/post_comment"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:37:49) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 23) [0m
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (63.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:37:49', '\"Soup\"', NULL, '2009-06-03 18:37:49')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:37:49) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 24) [0m
+Completed in 0ms (View: 0, DB: 63) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: DELETE http://www.example.com/articles/24 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-06-03 15:37:49) [DELETE]
+  Parameters: {"id"=>"24"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 24) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Destroy (0.0ms)[0m   [0;1mDELETE FROM `articles` WHERE `id` = 24[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles/24]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/articles/24"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:37:49) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (110.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (15.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:37:49', '\"Soup\"', NULL, '2009-06-03 18:37:49')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:37:49) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 25) [0m
+Completed in 16ms (View: 0, DB: 125) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /feedback with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#feedback (for 127.0.0.1 at 2009-06-03 15:37:49) [GET]
+  [4;35;1mFeedback Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `feedbacks`[0m
+Rendering articles/feedback
+
+
+Processing ApplicationController#feedback (for 127.0.0.1 at 2009-06-03 15:37:50) [GET]
+  [4;36;1mSQL (79.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:40:46', '\"Soup\"', NULL, '2009-06-03 18:40:46')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:40:46) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 26) [0m
+Completed in 328ms (View: 328, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (62.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:40:46) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 62) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:40:46) [GET]
+Rendering articles/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:40:46) [POST]
+  Parameters: {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:40:46', 'Soup', 'Delicious', '2009-06-03 18:40:46')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:40:46) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 27) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:40:46) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:40:46) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:40:46) [POST]
+  Parameters: {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering articles/new
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:40:46', '\"Soup\"', NULL, '2009-06-03 18:40:46')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:40:46) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 28) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/comment/28 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2009-06-03 15:40:47) [GET]
+  Parameters: {"id"=>"28"}
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering articles/comment
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.example.com/articles/comment/28]
+REQUESTING PAGE: POST /articles/post_comment with {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"28"}} and HTTP headers {"HTTP_REFERER"=>"/articles/comment/28"}
+
+
+Processing ArticlesController#post_comment (for 127.0.0.1 at 2009-06-03 15:40:47) [POST]
+  Parameters: {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"28"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`message`, `updated_at`, `title`, `article_id`, `created_at`) VALUES('Your blog post is good.', '2009-06-03 18:40:47', 'Good Post!', 28, '2009-06-03 18:40:47')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 15ms (DB: 0) | 302 Found [http://www.example.com/articles/post_comment]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles/post_comment"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:40:47) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 28) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (94.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (16.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:40:47', '\"Soup\"', NULL, '2009-06-03 18:40:47')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:40:47) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 29) [0m
+Completed in 15ms (View: 15, DB: 110) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: DELETE http://www.example.com/articles/29 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-06-03 15:40:47) [DELETE]
+  Parameters: {"id"=>"29"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 29) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Destroy (0.0ms)[0m   [0;1mDELETE FROM `articles` WHERE `id` = 29[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles/29]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/articles/29"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:40:47) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:40:47', '\"Soup\"', NULL, '2009-06-03 18:40:47')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:40:47) [GET]
+  [4;35;1mArticle Load (15.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 30) [0m
+Completed in 78ms (View: 63, DB: 62) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /feedback with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#feedback (for 127.0.0.1 at 2009-06-03 15:40:48) [GET]
+  [4;35;1mFeedback Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `feedbacks`[0m
+Rendering articles/feedback
+
+
+Processing ApplicationController#feedback (for 127.0.0.1 at 2009-06-03 15:40:49) [GET]
+  [4;36;1mSQL (141.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:53:39', '\"Soup\"', NULL, '2009-06-03 18:53:39')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:53:39) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 31) [0m
+Completed in 297ms (View: 281, DB: 16) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (140.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:53:39) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 15ms (View: 0, DB: 140) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:53:39) [GET]
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:53:39) [POST]
+  Parameters: {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:53:39', 'Soup', 'Delicious', '2009-06-03 18:53:39')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 16ms (DB: 0) | 302 Found [http://www.example.com/articles]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:53:39) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 32) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:53:40) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 78) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:53:40) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:53:40) [POST]
+  Parameters: {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:53:40', '\"Soup\"', NULL, '2009-06-03 18:53:40')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:53:40) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 33) [0m
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/comment/33 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2009-06-03 15:53:40) [GET]
+  Parameters: {"id"=>"33"}
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering articles/comment
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/comment/33]
+REQUESTING PAGE: POST /articles/post_comment with {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"33"}} and HTTP headers {"HTTP_REFERER"=>"/articles/comment/33"}
+
+
+Processing ArticlesController#post_comment (for 127.0.0.1 at 2009-06-03 15:53:40) [POST]
+  Parameters: {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"33"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`message`, `updated_at`, `title`, `article_id`, `created_at`) VALUES('Your blog post is good.', '2009-06-03 18:53:40', 'Good Post!', 33, '2009-06-03 18:53:40')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 15ms (DB: 0) | 302 Found [http://www.example.com/articles/post_comment]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles/post_comment"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:53:40) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 33) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (125.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:53:40', '\"Soup\"', NULL, '2009-06-03 18:53:40')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:53:40) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 34) [0m
+Completed in 0ms (View: 0, DB: 125) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: DELETE http://www.example.com/articles/34 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-06-03 15:53:40) [DELETE]
+  Parameters: {"id"=>"34"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 34) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Destroy (0.0ms)[0m   [0;1mDELETE FROM `articles` WHERE `id` = 34[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles/34]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/articles/34"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:53:40) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:53:40', '\"Soup\"', NULL, '2009-06-03 18:53:40')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:53:40) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 35) [0m
+Completed in 0ms (View: 0, DB: 31) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /feedback with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#feedback (for 127.0.0.1 at 2009-06-03 15:53:41) [GET]
+  [4;35;1mFeedback Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `feedbacks`[0m
+Rendering articles/feedback
+Completed in 32ms (View: 16, DB: 16) | 200 OK [http://www.example.com/feedback]
+  [4;36;1mSQL (32.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:55:10', '\"Soup\"', NULL, '2009-06-03 18:55:10')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:55:11) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 36) [0m
+Completed in 266ms (View: 250, DB: 16) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (32.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:55:11) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 32) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:55:11) [GET]
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:55:11) [POST]
+  Parameters: {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:55:11', 'Soup', 'Delicious', '2009-06-03 18:55:11')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:55:11) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 37) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:55:11) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 31) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:55:11) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:55:11) [POST]
+  Parameters: {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering articles/new
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:55:11', '\"Soup\"', NULL, '2009-06-03 18:55:11')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:55:11) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 38) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/comment/38 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2009-06-03 15:55:11) [GET]
+  Parameters: {"id"=>"38"}
+  [4;35;1mComment Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering articles/comment
+Completed in 31ms (View: 0, DB: 15) | 200 OK [http://www.example.com/articles/comment/38]
+REQUESTING PAGE: POST /articles/post_comment with {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"38"}} and HTTP headers {"HTTP_REFERER"=>"/articles/comment/38"}
+
+
+Processing ArticlesController#post_comment (for 127.0.0.1 at 2009-06-03 15:55:11) [POST]
+  Parameters: {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"38"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`message`, `updated_at`, `title`, `article_id`, `created_at`) VALUES('Your blog post is good.', '2009-06-03 18:55:11', 'Good Post!', 38, '2009-06-03 18:55:11')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles/post_comment]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles/post_comment"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:55:11) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 38) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (62.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:55:12', '\"Soup\"', NULL, '2009-06-03 18:55:12')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:55:12) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 39) [0m
+Completed in 0ms (View: 0, DB: 62) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: DELETE http://www.example.com/articles/39 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-06-03 15:55:12) [DELETE]
+  Parameters: {"id"=>"39"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 39) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Destroy (0.0ms)[0m   [0;1mDELETE FROM `articles` WHERE `id` = 39[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 16ms (DB: 0) | 302 Found [http://www.example.com/articles/39]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/articles/39"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:55:12) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:55:12', '\"Soup\"', NULL, '2009-06-03 18:55:12')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:55:12) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 40) [0m
+Completed in 0ms (View: 0, DB: 62) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /feedback with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#feedback (for 127.0.0.1 at 2009-06-03 15:55:12) [GET]
+  [4;35;1mFeedback Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `feedbacks`[0m
+Rendering articles/feedback
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://www.example.com/feedback]
+  [4;36;1mSQL (46.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:56:02', '\"Soup\"', NULL, '2009-06-03 18:56:02')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:02) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 41) [0m
+Completed in 250ms (View: 250, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (46.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:02) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 46) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:56:02) [GET]
+Rendering articles/new
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:56:02) [POST]
+  Parameters: {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:56:02', 'Soup', 'Delicious', '2009-06-03 18:56:02')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 15ms (DB: 0) | 302 Found [http://www.example.com/articles]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:02) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 42) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:02) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 16ms (View: 16, DB: 63) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:56:02) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:56:02) [POST]
+  Parameters: {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering articles/new
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:56:02', '\"Soup\"', NULL, '2009-06-03 18:56:02')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:03) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (15.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 43) [0m
+Completed in 15ms (View: 0, DB: 15) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/comment/43 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2009-06-03 15:56:03) [GET]
+  Parameters: {"id"=>"43"}
+  [4;35;1mComment Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering articles/comment
+Completed in 31ms (View: 15, DB: 16) | 200 OK [http://www.example.com/articles/comment/43]
+REQUESTING PAGE: POST /articles/post_comment with {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"43"}} and HTTP headers {"HTTP_REFERER"=>"/articles/comment/43"}
+
+
+Processing ArticlesController#post_comment (for 127.0.0.1 at 2009-06-03 15:56:03) [POST]
+  Parameters: {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"43"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (16.0ms)[0m   [0mINSERT INTO `comments` (`message`, `updated_at`, `title`, `article_id`, `created_at`) VALUES('Your blog post is good.', '2009-06-03 18:56:03', 'Good Post!', 43, '2009-06-03 18:56:03')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 16ms (DB: 16) | 302 Found [http://www.example.com/articles/post_comment]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles/post_comment"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:03) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 43) [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (109.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:56:03', '\"Soup\"', NULL, '2009-06-03 18:56:03')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:03) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 44) [0m
+Completed in 0ms (View: 0, DB: 109) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: DELETE http://www.example.com/articles/44 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-06-03 15:56:03) [DELETE]
+  Parameters: {"id"=>"44"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 44) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Destroy (0.0ms)[0m   [0;1mDELETE FROM `articles` WHERE `id` = 44[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles/44]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/articles/44"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:03) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:56:03', '\"Soup\"', NULL, '2009-06-03 18:56:03')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:03) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 45) [0m
+Completed in 78ms (View: 63, DB: 63) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /feedback with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#feedback (for 127.0.0.1 at 2009-06-03 15:56:03) [GET]
+  [4;35;1mFeedback Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `feedbacks`[0m
+Rendering articles/feedback
+Completed in 63ms (View: 63, DB: 0) | 200 OK [http://www.example.com/feedback]
+REQUESTING PAGE: POST /articles/post_feedback with {"commit"=>"Send", "comment"=>{"message"=>"Good articles published!", "name"=>"Steve", "email"=>"steve@apple.com"}} and HTTP headers {"HTTP_REFERER"=>"/feedback"}
+
+
+Processing ArticlesController#post_feedback (for 127.0.0.1 at 2009-06-03 15:56:04) [POST]
+  Parameters: {"commit"=>"Send", "comment"=>{"name"=>"Steve", "message"=>"Good articles published!", "email"=>"steve@apple.com"}}
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles/post_feedback]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles/post_feedback"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:04) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 45) [0m
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `articles`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:56:42', '\"Soup\"', NULL, '2009-06-03 18:56:42')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:42) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 46) [0m
+Completed in 265ms (View: 250, DB: 16) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (31.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:43) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 31) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:56:43) [GET]
+Rendering articles/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:56:43) [POST]
+  Parameters: {"article"=>{"title"=>"Soup", "content"=>"Delicious"}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:56:43', 'Soup', 'Delicious', '2009-06-03 18:56:43')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 16ms (DB: 0) | 302 Found [http://www.example.com/articles]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:43) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 47) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM `articles` [0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:43) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/new with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-06-03 15:56:43) [GET]
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles/new]
+REQUESTING PAGE: POST /articles with {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/articles/new"}
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-06-03 15:56:43) [POST]
+  Parameters: {"article"=>{"title"=>"", "content"=>""}, "commit"=>"Create"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:56:43', '\"Soup\"', NULL, '2009-06-03 18:56:43')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:43) [GET]
+  [4;35;1mArticle Load (16.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 48) [0m
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /articles/comment/48 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#comment (for 127.0.0.1 at 2009-06-03 15:56:43) [GET]
+  Parameters: {"id"=>"48"}
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering articles/comment
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles/comment/48]
+REQUESTING PAGE: POST /articles/post_comment with {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"48"}} and HTTP headers {"HTTP_REFERER"=>"/articles/comment/48"}
+
+
+Processing ArticlesController#post_comment (for 127.0.0.1 at 2009-06-03 15:56:43) [POST]
+  Parameters: {"commit"=>"Post Comment", "comment"=>{"message"=>"Your blog post is good.", "title"=>"Good Post!", "article_id"=>"48"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO `comments` (`message`, `updated_at`, `title`, `article_id`, `created_at`) VALUES('Your blog post is good.', '2009-06-03 18:56:43', 'Good Post!', 48, '2009-06-03 18:56:43')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 15ms (DB: 0) | 302 Found [http://www.example.com/articles/post_comment]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles/post_comment"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:43) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 48) [0m
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (78.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:56:43', '\"Soup\"', NULL, '2009-06-03 18:56:43')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:43) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 49) [0m
+Completed in 0ms (View: 0, DB: 78) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: DELETE http://www.example.com/articles/49 with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2009-06-03 15:56:43) [DELETE]
+  Parameters: {"id"=>"49"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` WHERE (`articles`.`id` = 49) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mArticle Destroy (0.0ms)[0m   [0;1mDELETE FROM `articles` WHERE `id` = 49[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles/49]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/articles/49"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:43) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;35;1mSQL (16.0ms)[0m   [0mSELECT count(*) AS count_all FROM `articles` [0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO `articles` (`updated_at`, `title`, `content`, `created_at`) VALUES('2009-06-03 18:56:44', '\"Soup\"', NULL, '2009-06-03 18:56:44')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /articles with {} and HTTP headers {}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:44) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.article_id = 50) [0m
+Completed in 79ms (View: 63, DB: 47) | 200 OK [http://www.example.com/articles]
+REQUESTING PAGE: GET /feedback with {} and HTTP headers {"HTTP_REFERER"=>"/articles"}
+
+
+Processing ArticlesController#feedback (for 127.0.0.1 at 2009-06-03 15:56:44) [GET]
+  [4;35;1mFeedback Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `feedbacks`[0m
+Rendering articles/feedback
+Completed in 63ms (View: 63, DB: 0) | 200 OK [http://www.example.com/feedback]
+REQUESTING PAGE: POST /articles/post_feedback with {"commit"=>"Send", "comment"=>{"message"=>"Good articles published!", "name"=>"Steve", "email"=>"steve@apple.com"}} and HTTP headers {"HTTP_REFERER"=>"/feedback"}
+
+
+Processing ArticlesController#post_feedback (for 127.0.0.1 at 2009-06-03 15:56:44) [POST]
+  Parameters: {"commit"=>"Send", "comment"=>{"name"=>"Steve", "message"=>"Good articles published!", "email"=>"steve@apple.com"}}
+Redirected to http://www.example.com/articles
+Completed in 0ms (DB: 0) | 302 Found [http://www.example.com/articles/post_feedback]
+REQUESTING PAGE: GET http://www.example.com/articles with {} and HTTP headers {"HTTP_REFERER"=>"/articles/post_feedback"}
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-06-03 15:56:44) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM `articles` [0m
+Rendering articles/index
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.article_id = 50) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://www.example.com/articles]
+  [4;36;1mSQL (47.0ms)[0m   [0;1mROLLBACK[0m

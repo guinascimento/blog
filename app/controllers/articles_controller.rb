@@ -40,4 +40,13 @@ class ArticlesController < ApplicationController
       flash[:notice] = "Article deleted."
     end
   end
+
+  def feedback
+    @feedback = Feedback.new
+  end
+
+  def post_feedback
+    flash[:notice] = "Feedback sent."
+    redirect_to(:action => 'index')
+  end
 end
